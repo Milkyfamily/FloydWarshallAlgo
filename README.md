@@ -16,24 +16,24 @@ The Python code for an imperative version of Floyd’s algorithm is included bel
     import itertools
 
     def floyd(distance):
-    """
-    A simple implementation of Floyd's algorithm
-    """
-    for intermediate, start_node,end_node\
-    in itertools.product\
-    (range(MAX_LENGTH),range(MAX_LENGTH), range(MAX_LENGTH)):
+        """
+        A simple implementation of Floyd's algorithm
+        """
+        for intermediate, start_node,end_node\
+        in itertools.product\
+        (range(MAX_LENGTH),range(MAX_LENGTH), range(MAX_LENGTH)):
       
-        # Assume that if start_node and end_node are the same
-        # then the distance would be zero
-        if start_node == end_node:
-            distance[start_node][end_node] = 0
-            continue
+            # Assume that if start_node and end_node are the same
+            # then the distance would be zero
+            if start_node == end_node:
+                distance[start_node][end_node] = 0
+                continue
 
-        #return all possible paths and find the minimum
-        distance[start_node][end_node] = min(distance[start_node][end_node],
+            #return all possible paths and find the minimum
+            distance[start_node][end_node] = min(distance[start_node][end_node],
                       distance[start_node][intermediate] + distance[intermediate][end_node] )
-      #Any value that have sys.maxsize has no path
-      print (distance)
+        #Any value that have sys.maxsize has no path
+        print (distance)
     floyd(graph
 
 Write to PEP standards. Put under source control and write unit tests for each function. Write performance tests and check your version against the source code from above.
