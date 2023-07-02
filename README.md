@@ -5,15 +5,15 @@ Rewrite Floyd’s algorithm to use recursion.
 
 The Python code for an imperative version of Floyd’s algorithm is included below:
 
+    import sys
+    import itertools
+    
     NO_PATH = sys.maxsize
     graph = [[0, 7, NO_PATH, 8],
     [NO_PATH, 0, 5, NO_PATH],
     [NO_PATH, NO_PATH, 0, 2],
     [NO_PATH, NO_PATH, NO_PATH, 0]]
     MAX_LENGTH = len(graph[0])
-
-    import sys
-    import itertools
 
     def floyd(distance):
         """
