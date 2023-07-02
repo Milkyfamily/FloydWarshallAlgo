@@ -36,3 +36,5 @@ The Python code for an imperative version of Floyd’s algorithm is included bel
       print (distance)
     floyd(graph
 
+Write to PEP standards. Put under source control and write unit tests for each function. Write performance tests and check your version against the source code from above.
+
