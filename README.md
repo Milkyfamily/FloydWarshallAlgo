@@ -34,7 +34,13 @@ The Python code for an imperative version of Floyd’s algorithm is included bel
                       distance[start_node][intermediate] + distance[intermediate][end_node] )
         #Any value that have sys.maxsize has no path
         print (distance)
-    floyd(graph
+    floyd(graph)
 
 Write to PEP standards. Put under source control and write unit tests for each function. Write performance tests and check your version against the source code from above.
 
+The output of the graph as below:
+
+    [[0, 7, 12, 8],
+     [9223372036854775807, 0, 5, 10],
+     [9223372036854775807, 9223372036854775807, 0, 2],
+     [9223372036854775807, 9223372036854775807, 9223372036854775807, 0]]
